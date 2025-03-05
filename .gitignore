@@ -1,0 +1,13 @@
+# Python virtual environment
+.venv/
+
+# Compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+
+# Sensitive information
+.env
+
+# local database
+./instance
