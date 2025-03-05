@@ -10,4 +10,4 @@ __pycache__/
 .env
 
 # local database
-./instance
+instance/

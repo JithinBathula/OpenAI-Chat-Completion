@@ -6,7 +6,6 @@ import uuid
 from datetime import datetime, timezone
 
 def openai_completion():
-    """Handle logic for generating OpenAI completions."""
     data = request.get_json()
     prompt = data.get('prompt')
     user_id = data.get('user_id')

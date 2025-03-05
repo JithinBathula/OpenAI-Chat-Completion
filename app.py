@@ -2,8 +2,6 @@ from flask import Flask
 from extensions import db
 from routes.openai_routes import openai_bp
 
-
-
 # Initialize Flask app
 app = Flask(__name__)
 app.config.from_object('config.Config')
