@@ -40,8 +40,8 @@ Follow these steps to set up the project on your local machine.
 Download the project files by cloning the repository:
 
 ```bash
-git clone https://github.com/JithinBathula/staple-ai.git
-cd staple-ai
+git clone https://github.com/JithinBathula/OpenAI-Chat-Completion.git
+cd OpenAI-Chat-Completion
 ```
 
 ### 2. Create a Virtual Environment
