@@ -11,3 +11,5 @@ __pycache__/
 
 # local database
 instance/
+
+.DS_Store

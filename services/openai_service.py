@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 client = OpenAI()
 
+# api call to openai
 def get_completion(messages):
     try:
         response = client.chat.completions.create(

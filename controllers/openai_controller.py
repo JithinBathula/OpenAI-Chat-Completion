@@ -21,6 +21,8 @@ def openai_completion():
     # Retrieve conversation history
     history = Message.query.filter_by(user_id=user_id).order_by(Message.timestamp).all()
     messages = [{"role": msg.role, "content": msg.content} for msg in history]
+
+    
     messages.append({"role": "user", "content": prompt})
     
     # Get response from openai
