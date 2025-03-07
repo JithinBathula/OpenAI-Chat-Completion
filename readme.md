@@ -40,11 +40,9 @@ Follow these steps to set up the project on your local machine.
 Download the project files by cloning the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/JithinBathula/staple-ai.git
 cd staple-ai
 ```
-
-Replace `<repository-url>` with the actual URL of the repository.
 
 ### 2. Create a Virtual Environment
 
@@ -99,7 +97,7 @@ Start the Flask application with:
 python app.py
 ```
 
-The API will be hosted at `http://localhost:5000`. You’ll see output indicating the server is running, typically:
+The API will be hosted at `http://127.0.0.1:5000/`. You’ll see output indicating the server is running, typically:
 
 ```
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
@@ -174,7 +172,7 @@ If these limits are exceeded, the API returns a 429 (Too Many Requests) response
 You can adjust rate limits by modifying the configuration in the source code:
 
 1. **Global Limits**  
-   Edit the `default_limits` in `app.py` or `extensions.py` (depending on your setup):
+   Edit the `default_limits` in `extensions.py`:
 
    ```python
    limiter = Limiter(
@@ -213,8 +211,6 @@ When you first run the application, it automatically creates an `instance` folde
 - `timestamp` (DATETIME): When the message was sent or received.
 - `role` (TEXT): Either "user" (request) or "assistant" (response).
 - `content` (TEXT): The message text.
-
-NOTE: The id column is an auto-incrementing integer that ensures each message has a unique identifier. This is the primary key in the database and is managed automatically. The user_id links messages to a specific user, allowing the application to retrieve conversation history.
 
 ### Notes
 
