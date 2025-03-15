@@ -12,15 +12,17 @@ limiter.init_app(app)
 # register routes
 app.register_blueprint(openai_bp)
 
+
 @app.errorhandler(429)
 def rate_limit_exceeded(e):
+    limit_description = str(e)
+
     response = jsonify({
         "error": "Rate limit exceeded",
-        "message": str(e.description),
+        "message": f"You have exceeded the limit of {limit_description}. Please wait and try again.",
     })
     response.status_code = 429
     return response
-
 
 
 # create database tables
