@@ -13,8 +13,8 @@ def openai_completion():
         data = request.get_json()
     except Exception:
         return jsonify({
-            'error': 'Missing prompt',
-            'details': 'The request must include a "prompt" field with a non-empty string.'
+            'error': 'Invalid request',
+            'details': 'Request body must be valid JSON.'
         }), 400
 
     prompt = data.get('prompt')
